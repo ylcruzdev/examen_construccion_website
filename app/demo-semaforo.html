@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Semáforo CSS - Semáforos Inteligentes Bilbao</title>
+    <link rel="icon" href="../src/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../src/css/main.css">
+    <link rel="stylesheet" href="../src/css/semaforo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="nav-header">
+        <a href="../index.html" class="nav-logo">SmartTraffic Bilbao</a>
+        <nav>
+            <input class="btn-toggle-menu" type="checkbox" name="btnToggleMenu" id="btnToggleMenu">                        
+            <label for="btnToggleMenu" class="btn-toggle-menu-ico fa-solid fa-bars"></label>
+            
+            <ul class="nav-menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="demo-semaforo.html" class="active">Demo Semáforo</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <h1 class="section-title">Semáforo Inteligente - Demo</h1>
+                <p style="text-align: center; margin-bottom: 2rem;">Esta es una representación visual de un semáforo inteligente.</p>
+
+                <div class="semaforo-container">
+                    <!-- Semáforo visual -->
+                    <div class="semaforo">
+                        <div class="semaforo-caja">
+                            <div class="luz luz-roja" id="rojo"></div>
+                            <div class="luz luz-amarilla" id="amarillo"></div>
+                            <div class="luz luz-verde" id="verde"></div>
+                        </div>
+                        <div class="semaforo-postes"></div>
+                    </div>
+
+                    <!-- Controles visuales -->
+                    <div class="controles-semaforo">
+                        <h3>Estados del Semáforo</h3>
+                        <p>Haz clic en los botones para cambiar el estado:</p>
+                        <div class="botones-estado">
+                            <a href="#rojo" class="btn-estado btn-rojo">Rojo</a>
+                            <a href="#amarillo" class="btn-estado btn-amarillo">Amarillo</a>
+                            <a href="#verde" class="btn-estado btn-verde">Verde</a>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+
+                <article class="card" style="margin-top: 3rem;">
+                    <h2>¿Cómo funciona un semáforo inteligente?</h2>
+                    <ul style="margin-left: 2rem; margin-top: 1rem;">
+                        <li><strong>Rojo:</strong> Detención total. Los sensores detectan vehículos esperando.</li>
+                        <li><strong>Amarillo:</strong> Precaución. Transición entre estados, dura 3 segundos.</li>
+                        <li><strong>Verde:</strong> Paso permitido. El semáforo inteligente ajusta su duración según el flujo detectado.</li>
+                    </ul>
+                </article>
+
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="sobre-nosotros.html" class="btn btn-secondary">Volver a Sobre Nosotros</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>SmartTraffic Bilbao - Modernizando el tráfico urbano</p>
+        <div class="footer-links">
+            <a href="https://github.com/ylcruzdev" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/yoandres-la-cruz" target="_blank">LinkedIn</a>
+            <a href="mailto:ylcruz.dev@gmail.com">Email</a>
+            <a href="https://discord.com/users/ylcruz.dev" target="_blank">Discord</a>
+        </div>
+        <div class="footer-info">
+            <p>Autor: Yoandres la Cruz | Proyecto académico 2026</p>
+        </div>
+    </footer>
+</body>
+</html>

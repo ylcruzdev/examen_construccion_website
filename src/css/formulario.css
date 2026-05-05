@@ -1,0 +1,163 @@
+/* Estilos para el formulario de contacto */
+.formulario-contacto {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px var(--sombra);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--gris-oscuro);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: var(--fuente-principal);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--rojo-bilbao);
+    box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.2);
+}
+
+/* Validación CSS */
+.form-group input:valid,
+.form-group select:valid,
+.form-group textarea:valid {
+    border-color: var(--verde);
+}
+
+.form-group input:invalid:not(:placeholder-shown),
+.form-group select:invalid:not(:placeholder-shown),
+.form-group textarea:invalid:not(:placeholder-shown) {
+    border-color: var(--rojo-claro);
+}
+
+.form-error {
+    display: none;
+    color: var(--rojo-claro);
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+}
+
+.form-group input:invalid:not(:placeholder-shown) + .form-error {
+    display: block;
+}
+
+/* Radio buttons y Checkboxes */
+.radio-group,
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.radio-label,
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.radio-label input[type="radio"],
+.checkbox-label input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.radio-label:hover,
+.checkbox-label:hover {
+    color: var(--rojo-bilbao);
+}
+
+/* Textarea */
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Form check (privacy) */
+.form-check {
+    background-color: var(--gris-claro);
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+/* Buttons */
+.form-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.form-buttons .btn {
+    min-width: 150px;
+}
+
+.btn[type="reset"] {
+    background-color: #95a5a6;
+}
+
+.btn[type="reset"]:hover {
+    background-color: #7f8c8d;
+}
+
+/* Placeholder styling */
+::placeholder {
+    color: #aaa;
+    opacity: 1;
+}
+
+/* Required indicator */
+label[for]::after {
+    content: "";
+}
+
+label[for="nombre"]::after,
+label[for="email"]::after,
+label[for="asunto"]::after,
+label[for="mensaje"]::after {
+    content: " *";
+    color: var(--rojo-claro);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .formulario-contacto {
+        padding: 1.5rem;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+
+    .form-buttons .btn {
+        width: 100%;
+    }
+}

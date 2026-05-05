@@ -1,0 +1,114 @@
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('../img/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--blanco);
+    text-align: center;
+    padding: 6rem 0;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    color: var(--gris-claro);
+}
+
+/* Beneficios Grid */
+.beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.beneficio-card h3 {
+    color: var(--rojo-bilbao);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.beneficio-card p {
+    color: var(--gris-oscuro);
+}
+
+/* Datos Grid */
+.datos {
+    background-color: var(--gris-claro);
+}
+
+.datos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    text-align: center;
+}
+
+.dato-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.dato-numero {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--rojo-bilbao);
+}
+
+.dato-label {
+    font-size: 1rem;
+    color: var(--gris-oscuro);
+}
+
+/* Call To Action Section */
+.cta {
+    text-align: center;
+    background-color: var(--blanco);
+}
+
+.cta h2 {
+    margin-bottom: 1rem;
+    color: var(--gris-oscuro);
+}
+
+.cta p {
+    margin-bottom: 2rem;
+    color: var(--gris-oscuro);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .beneficios-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .datos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dato-numero {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .datos-grid {
+        grid-template-columns: 1fr;
+    }
+}
