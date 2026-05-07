@@ -48,6 +48,12 @@ body {
     color: var(--rojo-claro);
 }
 
+#date-dia-semana {
+    color: var(--blanco);
+    font-size: 0.95rem;
+    white-space: nowrap;
+}
+
 .nav-menu {
     list-style: none;
     display: flex;
