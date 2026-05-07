@@ -17,11 +17,10 @@ export const authController = {
         const result = {}
         let user = authService.getUserByEmail(email)
         let validate = false
-        //si existe el user
-        //validar email y pasword aqui luego
+        //si existe el user validar email y pasword
         if (user.status){
             validate = (password === user.data.password) && (email === user.data.email) ? true : false
-            //si las credenciales son correctas llamar a authenticated y colocar dentro de result status true y msg: "login existoso"
+            //si las credenciales son correctas llamar a authenticated y colocar dentro de result status: true y msg: "login existoso"
             if(validate){
                 this.authenticated(user.data)
                 result.status = true
@@ -34,7 +33,7 @@ export const authController = {
             }
         }
         else{
-            // sino existe el user colocar dentro del resulto status: false y msg: 
+            // sino existe el user colocar dentro del result status: false y msg 
             result.status = false
             result.msg = user.msg
         }

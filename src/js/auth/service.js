@@ -5,7 +5,12 @@ export const authService = {
             email: "ylcruz.dev@gmail.com",
             password: "12345678",
             name: "Yoandres La Cruz"
-        }
+        },
+        {
+            email: "luis.alfonso@gmail.com",
+            password: "87654321",
+            name: "Luis Afonso"
+        },
     ],
 
     getUserByEmail(email){

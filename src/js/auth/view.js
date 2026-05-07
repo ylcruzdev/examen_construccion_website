@@ -39,7 +39,7 @@ export const authView = {
         let result = authController.validateCredentials(email, pasword)
 
         if (result.status) {
-            window.location.replace("../index.html")
+            window.location.replace("loginSuccessful.html")
         }
         else{
             this.responseMsg(result.msg)
