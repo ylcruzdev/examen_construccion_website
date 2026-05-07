@@ -120,6 +120,11 @@
     min-width: 150px;
 }
 
+.btn-primary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
 .btn[type="reset"] {
     background-color: #95a5a6;
 }
