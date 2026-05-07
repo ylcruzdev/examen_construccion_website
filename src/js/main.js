@@ -1,3 +1,3 @@
-import { Auth } from "./auth.js"
+import { Auth } from "./auth/auth.js"
 
-Auth.hello()
+Auth.init()

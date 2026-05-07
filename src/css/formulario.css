@@ -147,6 +147,36 @@ label[for="mensaje"]::after {
     color: var(--rojo-claro);
 }
 
+/* Password field */
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: var(--fuente-principal);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input[type="password"]:focus {
+    outline: none;
+    border-color: var(--rojo-bilbao);
+    box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.2);
+}
+
+.form-group input[type="password"]:valid {
+    border-color: var(--verde);
+}
+
+.form-group input[type="password"]:invalid:not(:placeholder-shown) {
+    border-color: var(--rojo-claro);
+}
+
+label[for="password"]::after {
+    content: " *";
+    color: var(--rojo-claro);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .formulario-contacto {
